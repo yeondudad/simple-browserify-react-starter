@@ -1,0 +1,43 @@
+// ------------------------------------- //
+// Style of Introduce
+// ------------------------------------- //
+
+$module: 'introduce';
+
+.#{$module} {
+    &__inner {
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+    &__socials {
+        width: 222px;
+        height: 64px;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    &__social {
+        float: left;
+        margin-right: 10px;
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        &.facebook {
+            @include sprite('ico_facebook');
+        }
+
+        &.twitter {
+            @include sprite('ico_twitter');
+        }
+
+        &.github {
+            @include sprite('ico_github');
+        }
+    }
+}

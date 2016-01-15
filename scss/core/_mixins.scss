@@ -1,0 +1,10 @@
+@mixin sprite($filename, $map: $sp-simple-browserify-react-starter, $is-dimension: true) {
+    $dimension-map: map-get($map, $filename);
+
+    @extend %#{map-get($map, spritesheet_name)};
+    background-position: map-get($dimension-map, offset_x) map-get($dimension-map, offset_y);
+    @if ($is-dimension == true) {
+        width: map-get($dimension-map, width);
+        height: map-get($dimension-map, height);
+    }
+}
