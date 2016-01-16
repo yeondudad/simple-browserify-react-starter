@@ -27,18 +27,10 @@ gulp.task('default:html', function() {
 
 gulp.task('default', ['default:script', 'default:html'], function(watch) {
     if (watch) {
-        gulp.run('instant');
+        gulp.watch('js/**/*.js', ['script']);
+        gulp.watch('html/**/*.html', ['htmlinclude']);
+        gulp.watch('scss/**/*.scss', ['sass']);
 
-        gulp.watch('js/**/*.js', function() {
-            runSequence('script');
-        });
-
-        gulp.watch('html/**/*.html', function() {
-            runSequence('htmlinclude');
-        });
-
-        gulp.watch('scss/**/*.scss', function() {
-            runSequence('sass');
-        });
+        gulp.start('instant');
     }
 });
