@@ -15,6 +15,7 @@ gulp.task('spritesmith', loader('spritesmith'));
 gulp.task('imageresize', loader('imageresize'));
 gulp.task('scsslint', loader('scsslint'));
 gulp.task('sass', loader('sass'));
+gulp.task('instant', loader('instant'));
 
 gulp.task('default:script', function() {
     runSequence('jslint', ['vendor', 'script']);
@@ -26,6 +27,8 @@ gulp.task('default:html', function() {
 
 gulp.task('default', ['default:script', 'default:html'], function(watch) {
     if (watch) {
+        gulp.run('instant');
+
         gulp.watch('js/**/*.js', function() {
             runSequence('script');
         });
