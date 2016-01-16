@@ -122,9 +122,10 @@ sftp-config.json
 
 ### Project ignore files.
 # build files
-simple-browserify-react-starter-*
-sp_simple-browserify-react-starter*
 build/index.html
+build/assets/css
+build/assets/js
+build/assets/img/*.png
 
 # sprite generate file
 _sprites.scss
