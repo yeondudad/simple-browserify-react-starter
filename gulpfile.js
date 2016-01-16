@@ -9,12 +9,14 @@ gulp.task('jstest', loader('jstest'));
 gulp.task('vendor', loader('browserify', 'vendor'));
 gulp.task('script', loader('browserify', 'script'));
 
-// Build(s) for Markup
+// Build(s) for Markup.
 gulp.task('htmlinclude', loader('htmlinclude'));
 gulp.task('spritesmith', loader('spritesmith'));
 gulp.task('imageresize', loader('imageresize'));
 gulp.task('scsslint', loader('scsslint'));
 gulp.task('sass', loader('sass'));
+
+// Dev Server.
 gulp.task('instant', loader('instant'));
 
 gulp.task('default:script', function() {
